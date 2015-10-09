@@ -20,13 +20,15 @@ define poudriere::env (
   $portstree        = 'default',
   $cron_enable      = false,
   $cron_always_mail = false,
-  $cron_interval    = { minute => 0, hour => 0, monthday => '*', month => '*', weekday => '*' },
+  $cron_interval    = { minute => '0', hour => '0', monthday => '*', month => '*', weekday => '*' },
 ) {
 
   # Make sure we are prepared to run
   include ::poudriere
   if ! defined(Poudriere::Portstree[$portstree]) {
     if $portstree == 'defaut' {
+      #This is a lie the default portstree is still created by default 
+      #but may not be in the future
       warn('The default portstree is no longer created automatically.  Please consult the Readme file for instructions on how to create this yourself')
     } else {
       warn("portstree['${portstree}'] is not defined please consult the Readme for instructions on how to create this.")

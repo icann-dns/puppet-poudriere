@@ -110,4 +110,19 @@ poudriere::portstrees:
 poudriere::environments:
   custom-build:
     portstree: custom-ports
+The default portstreee is configuered using the default_* parameters to the main class 
+
+```Puppet
+class { 'poudriere':
+  default_port_fetch_method => 'svn',
+  default_cron_enable       => false,
+  default_cron_always_mail  => false,
+  default_cron_interval     => {
+    minute   => 0, 
+    hour     => 22, 
+    monthday => '*', 
+    month    => '*', 
+    week     => '*'
+  },
+}
 ```
