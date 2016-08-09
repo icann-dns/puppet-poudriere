@@ -73,7 +73,7 @@ class poudriere (
   # are deprecated and will eventually default to true.
   # portstree management has moved to poudriere::portstree
   if $cron_enable == true {
-    notice('cron_enable, cron_interval and port_fetch_method on class poudriere is deprecated, define seperately poudriere::portstree.  for the default portdstreee us default_${parameter} e.g. default_cron_enable')
+    notice('cron_enable, cron_interval and port_fetch_method on class poudriere is deprecated, define seperately poudriere::portstree.  for the default portstreee us default_${parameter} e.g. default_cron_enable')
   }
 
   cron { 'poudriere-update-ports':
