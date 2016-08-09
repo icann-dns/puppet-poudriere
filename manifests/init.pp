@@ -35,7 +35,7 @@ class poudriere (
   $default_port_fetch_method = 'svn',
   $default_cron_enable       = false,
   $default_cron_always_mail  = false,
-  $default_cron_interval     = {minute => 0, hour => 22, monthday => '*', month => '*', week => '*'},
+  $default_cron_interval     = {minute => '0', hour => '22', monthday => '*', month => '*', week => '*'},
   $environments             = {},
   $portstrees               = {},
 ) {

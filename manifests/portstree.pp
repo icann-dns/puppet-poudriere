@@ -8,7 +8,7 @@ define poudriere::portstree (
   $fetch_method     = 'svn',
   $cron_enable      = false,
   $cron_always_mail = false,
-  $cron_interval    = {minute => 0, hour => 22, monthday => '*', month => '*', week => '*'},
+  $cron_interval    = {minute => '0', hour => '22', monthday => '*', month => '*', week => '*'},
 ) {
 
   include ::poudriere

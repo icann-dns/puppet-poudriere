@@ -20,7 +20,7 @@ define poudriere::env (
   $portstree        = 'default',
   $cron_enable      = false,
   $cron_always_mail = false,
-  $cron_interval    = { minute => 0, hour => 0, monthday => '*', month => '*', weekday => '*' },
+  $cron_interval    = { minute => '0', hour => '0', monthday => '*', month => '*', weekday => '*' },
 ) {
 
   # Make sure we are prepared to run
