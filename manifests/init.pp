@@ -33,7 +33,7 @@ class poudriere (
   $http_proxy                = '',
   $ftp_proxy                 = '',
   $default_port_fetch_method = 'svn',
-  $default_cron_enable       = false,
+  $default_cron_enable       = true,
   $default_cron_always_mail  = false,
   $default_cron_interval     = {minute => '0', hour => '22', monthday => '*', month => '*', week => '*'},
   $environments             = {},
